@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ایران باستان - تاریخ و فرهنگ</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            font-family: 'Tahoma', sans-serif;
+            margin: 0;
+            padding: 0;
+            direction: rtl;
+            overflow-x: hidden;
+            background: linear-gradient(to bottom, #239f40 33%, #ffffff 33%, #ffffff 66%, #d72b29 66%);
+            color: black;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.8);
+        }
+        header {
+            text-align: center;
+            padding: 2rem 0;
+            position: relative;
+        }
+        h1 {
+            font-size: 3rem;
+            margin: 0;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 2rem auto;
+            padding: 1rem;
+        }
+        .topic {
+            background: rgba(255, 255, 255, 0.8);
+            margin: 1rem 0;
+            border-radius: 12px;
+            overflow: hidden;
+            cursor: pointer;
+            transition: background 0.3s ease;
+        }
+        .topic:hover {
+            background: rgba(255, 255, 255, 1);
+        }
+        .topic-title {
+            padding: 1rem;
+            font-size: 1.8rem;
+        }
+        .topic-content {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1rem;
+            opacity: 0;
+            transition: max-height 0.8s ease-in-out, opacity 0.8s ease;
+        }
+        .topic-content.show {
+            max-height: 1000px;
+            opacity: 1;
+        }
+        img {
+            max-width: 100%;
+            border-radius: 12px;
+            margin-top: 1rem;
+        }
+        footer {
+            text-align: center;
+            padding: 1rem 0;
+            background: rgba(255, 255, 255, 0.8);
+            margin-top: 2rem;
+        }
+        .contact {
+            text-align: center;
+            margin-top: 3rem;
+        }
+        .contact a {
+            color: #FFD700;
+            text-decoration: none;
+            font-size: 1.5rem;
+        }
+        .lion-sun {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>ایران باستان - تاریخ و فرهنگ</h1>
+        <img class="lion-sun" src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/74/Imperial_Coat_of_Arms_of_Iran.svg/640px-Imperial_Coat_of_Arms_of_Iran.svg.png" alt="نماد شیر و خورشید">
+    </header>
+    <div class="container">
+
+        <div class="topic" onclick="toggleContent(this)">
+            <div class="topic-title">تمدن‌های ایران باستان</div>
+            <div class="topic-content">
+                <p>ایران باستان یکی از کهن‌ترین تمدن‌های جهان را دارا بود. از دوره ایلامی‌ها تا امپراتوری هخامنشیان، فرهنگ و تاریخ این منطقه جهان را تحت تأثیر قرار داده است.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8b/Persepolis_05.jpg/640px-Persepolis_05.jpg" alt="پرسپولیس">
+            </div>
+        </div>
+
+        <div class="topic" onclick="toggleContent(this)">
+            <div class="topic-title">هخامنشیان</div>
+            <div class="topic-content">
+                <p>امپراتوری هخامنشی نخستین و بزرگ‌ترین امپراتوری جهان بود که به دست کوروش بزرگ بنیان نهاده شد و در زمان داریوش به اوج قدرت رسید.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/Persepolis.jpg/640px-Persepolis.jpg" alt="هخامنشیان">
+            </div>
+        </div>
+
+        <div class="topic" onclick="toggleContent(this)">
+            <div class="topic-title">ساسانیان</div>
+            <div class="topic-content">
+                <p>دوره ساسانیان، دوره‌ای از شکوه فرهنگی و اقتصادی ایران بود که به ایجاد ساختارهای حکومتی و معماری پیشرفته منجر شد.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ed/Taq_Kasra%2C_Ctesiphon%2C_Iraq.jpg/640px-Taq_Kasra%2C_Ctesiphon%2C_Iraq.jpg" alt="طاق کسری">
+            </div>
+        </div>
+
+        <div class="topic" onclick="toggleContent(this)">
+            <div class="topic-title">زرتشت و آیین زرتشتی</div>
+            <div class="topic-content">
+                <p>آیین زرتشتی یکی از کهن‌ترین ادیان جهان است که در ایران باستان ظهور کرد و تأثیر زیادی بر فرهنگ و دین‌های پس از خود گذاشت.</p>
+                <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/ff/Atashkadeh_Yazd.jpg/640px-Atashkadeh_Yazd.jpg" alt="آتشکده یزد">
+            </div>
+        </div>
+
+        <!-- بخش ارتباط با طراح -->
+        <div class="contact">
+            <p>ارتباط با طراح: <a href="https://t.me/spsh08" target="_blank">@spsh08</a></p>
+        </div>
+
+    </div>
+
+    <footer>
+        <p>© 2025 - ایران باستان - تمامی حقوق محفوظ است</p>
+    </footer>
+
+    <script>
+        function toggleContent(element) {
+            const content = element.querySelector('.topic-content');
+            content.classList.toggle('show');
+        }
+    </script>
+
+</body>
+
+</html>
